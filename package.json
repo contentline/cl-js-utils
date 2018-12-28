@@ -1,0 +1,19 @@
+{
+  "name": "cl-js-utils",
+  "version": "0.0.1",
+  "description": "Content Line JS utils",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "gitea@git.contentline.ru:CONTENT_LINE/cl-js-utils.git"
+  },
+  "keywords": [
+    "JS",
+    "utils"
+  ],
+  "author": "cudr",
+  "license": "ISC"
+}
