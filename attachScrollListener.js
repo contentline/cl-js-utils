@@ -24,4 +24,4 @@ const attachScrollListener = (elem, fn) => {
   }
 }
 
-export default atttachScrollListener
+export default attachScrollListener
