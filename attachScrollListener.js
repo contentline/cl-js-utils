@@ -1,8 +1,10 @@
+import checkPassiveEvent from './checkPassiveEvent'
+
 /**
  * Метод для добавления scroll-listener для элемента
  * @method atttachScrollListener
  * @param  {Element} elem DOM - элемент
- * @param  {Function} fn 
+ * @param  {Function} fn
  */
 const attachScrollListener = (elem, fn) => {
   const passiveEventParam = checkPassiveEvent()
