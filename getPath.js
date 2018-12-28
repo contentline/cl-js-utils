@@ -17,4 +17,4 @@ const getPath = (obj = {}, path = [], miss) => {
   }
 }
 
-export const getPath
+export default getPath
