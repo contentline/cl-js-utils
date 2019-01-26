@@ -6,18 +6,18 @@
  */
 const detachScrollListener = (elem, fn) => {
   if (elem.addEventListener) {
-    if ('onscroll' in document) {
-      elem.removeEventListener('scroll', fn)
-    } else if ('onwheel' in document) {
-      elem.removeEventListener('wheel', fn)
-    } else if ('onmousewheel' in document) {
-      elem.removeEventListener('mousewheel', fn)
+    if ("onscroll" in document) {
+      elem.removeEventListener("scroll", fn);
+    } else if ("onwheel" in document) {
+      elem.removeEventListener("wheel", fn);
+    } else if ("onmousewheel" in document) {
+      elem.removeEventListener("mousewheel", fn);
     } else {
-      elem.removeEventListener('MozMousePixelScroll', fn)
+      elem.removeEventListener("MozMousePixelScroll", fn);
     }
   } else {
-    elem.detachEvent('onmousewheel', fn)
+    elem.detachEvent("onmousewheel", fn);
   }
-}
+};
 
-export default detachScrollListener
+export default detachScrollListener;

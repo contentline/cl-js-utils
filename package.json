@@ -5,7 +5,7 @@
   "main": "lib/lindex.js",
   "mainDir": "lib",
   "scripts": {
-    "build": "babel src --out-dir lib",
+    "build": "babel src --out-dir ./",
     "postinstall": "yarn build",
     "format": "prettier --write"
   },

@@ -7,14 +7,16 @@
  */
 const getPath = (obj = {}, path = [], miss) => {
   try {
-    const keys = typeof path === 'string' ? path.split('.') : Array.isArray(path) && path
+    const keys =
+      typeof path === "string" ? path.split(".") : Array.isArray(path) && path;
 
-    const search = keys && keys.length && keys.reduce((lv, key) => lv && lv[key], obj)
+    const search =
+      keys && keys.length && keys.reduce((lv, key) => lv && lv[key], obj);
 
-    return (search !== undefined && search !== null) ? search : miss
+    return search !== undefined && search !== null ? search : miss;
   } catch (error) {
-    console.error('getPath error!', error)
+    console.error("getPath error!", error);
   }
-}
+};
 
-export default getPath
+export default getPath;
