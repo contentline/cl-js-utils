@@ -2,9 +2,12 @@
   "name": "cl-js-utils",
   "version": "0.0.1",
   "description": "Content Line JS utils",
-  "main": "index.js",
+  "main": "lib/lindex.js",
+  "mainDir": "lib",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src --out-dir ./",
+    "postinstall": "yarn build",
+    "format": "prettier --write"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,24 @@
     "utils"
   ],
   "author": "cudr",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.16.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "!lib/*.{js,json,babelrc}": [
+      "yarn run format",
+      "git add"
+    ]
+  }
 }
