@@ -1,6 +1,6 @@
 {
   "name": "cl-js-utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Content Line JS utils",
   "main": "lib/lindex.js",
   "mainDir": "lib",

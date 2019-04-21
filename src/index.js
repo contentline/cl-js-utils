@@ -6,6 +6,7 @@ import getPath from "./getPath";
 import hasCookie from "./hasCookie";
 import sleep from "./sleep";
 import uniqId from "./uniqId";
+import intersectionObserve from "./intersectionObserve";
 
 export {
   attachScrollListener,
@@ -15,5 +16,6 @@ export {
   getPath,
   hasCookie,
   sleep,
-  uniqId
+  uniqId,
+  intersectionObserve
 };
