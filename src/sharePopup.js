@@ -4,6 +4,7 @@ const shareUrls = {
   facebook: href => `https://facebook.com/sharer/sharer.php?u=${href}`,
   vkontakte: href => `https://vkontakte.ru/share.php?url=${href}`,
   twitter: href => `https://twitter.com/intent/tweet?url=${href}`,
+  telegram: href => `https://telegram.me/share/url?url=${href}`,
   odnoklassniki: (href, text) =>
     `https://connect.ok.ru/offer?url=${href}&title=${text}`
 };
