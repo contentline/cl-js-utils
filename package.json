@@ -38,7 +38,7 @@
     }
   },
   "lint-staged": {
-    "!lib/*.{js,json,babelrc}": [
+    "*.{js,json,babelrc}": [
       "yarn run format",
       "git add"
     ]
