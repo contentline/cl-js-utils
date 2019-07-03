@@ -1,15 +1,19 @@
 {
   "name": "@content_line/js-utils",
-  "version": "0.0.15",
+  "version": "0.0.2",
   "description": "Content Line JS utils",
   "publishConfig": {
     "registry": "https://npm.contentline.ru"
   },
+  "main": "dist/index.js",
   "scripts": {
-    "build": "babel src --out-dir ./",
+    "build": "babel src --out-dir ./dist",
     "prepublishOnly": "yarn build",
     "format": "prettier --write"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "gitea@git.contentline.ru:CONTENT_LINE/cl-js-utils.git"
@@ -19,7 +23,6 @@
     "utils"
   ],
   "author": "cudr",
-  "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
