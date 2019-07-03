@@ -1,12 +1,15 @@
 {
   "name": "@content_line/js-utils",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Content Line JS utils",
   "publishConfig": {
     "registry": "https://npm.contentline.ru"
   },
-  "main": "dist",
-  "mainDir": "dist",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist",
+  "mainDir": "./dist",
   "scripts": {
     "build": "babel src --out-dir ./dist",
     "prepublishOnly": "yarn build",
