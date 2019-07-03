@@ -1,14 +1,14 @@
 {
   "name": "@content_line/js-utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Content Line JS utils",
   "publishConfig": {
     "registry": "https://npm.contentline.ru"
   },
-  "main": "lib/lindex.js",
-  "mainDir": "lib",
+  "main": "dist",
+  "mainDir": "dist",
   "scripts": {
-    "build": "babel src --out-dir ./",
+    "build": "babel src --out-dir ./dist",
     "prepublishOnly": "yarn build",
     "format": "prettier --write"
   },
