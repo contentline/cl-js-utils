@@ -1,4 +1,18 @@
 {
-  "presets": ["@babel/preset-env"],
-  "plugins": ["@babel/plugin-transform-runtime"]
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": ["> 0.5% in RU", "ie 11", "not dead", "not op_mini all"]
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "useESModules": true
+      }
+    ]
+  ]
 }
