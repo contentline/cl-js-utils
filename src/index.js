@@ -6,6 +6,7 @@ import getPath from "./getPath";
 import hasCookie from "./hasCookie";
 import sleep from "./sleep";
 import uniqId from "./uniqId";
+import keyBy from "./keyBy";
 import intersectionObserve from "./intersectionObserve";
 
 export {
