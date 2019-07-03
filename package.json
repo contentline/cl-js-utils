@@ -1,6 +1,6 @@
 {
   "name": "@content_line/js-utils",
-  "version": "0.0.3",
+  "version": "0.0.17",
   "description": "Content Line JS utils",
   "publishConfig": {
     "registry": "https://npm.contentline.ru"
