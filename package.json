@@ -1,18 +1,13 @@
 {
   "name": "@content_line/js-utils",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Content Line JS utils",
   "publishConfig": {
     "registry": "https://npm.contentline.ru"
   },
-  "files": [
-    "dist"
-  ],
-  "main": "./dist",
-  "mainDir": "./dist",
   "scripts": {
-    "build": "babel src --out-dir ./dist",
-    "prepublishOnly": "yarn build && generate-export-aliases",
+    "build": "babel src --out-dir ./",
+    "prepublishOnly": "yarn build",
     "format": "prettier --write"
   },
   "repository": {
@@ -23,12 +18,6 @@
     "JS",
     "utils"
   ],
-  "config": {
-    "exportAliases": {
-      "auth0": "./dist/Auth0",
-      "keyBy": "./dist/keyBy.js"
-    }
-  },
   "author": "cudr",
   "license": "ISC",
   "devDependencies": {
@@ -36,7 +25,6 @@
     "@babel/core": "^7.2.2",
     "@babel/plugin-transform-runtime": "^7.3.4",
     "@babel/preset-env": "^7.3.1",
-    "generate-export-aliases": "1.1.0",
     "husky": "^1.3.1",
     "lint-staged": "^8.1.0",
     "prettier": "^1.16.1"
