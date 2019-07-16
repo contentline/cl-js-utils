@@ -1,0 +1,84 @@
+Arguments: 
+  /Users/cudr/.nvm/versions/node/v11.9.0/bin/node /usr/local/Cellar/yarn/1.15.2/libexec/bin/yarn.js
+
+PATH: 
+  /Users/cudr/.nvm/versions/node/v11.9.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Frameworks/Mono.framework/Versions/Current/Commands
+
+Yarn version: 
+  1.15.2
+
+Node version: 
+  11.9.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://npm.contentline.ru/query-string: authorization required to access package query-string
+      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.15.2/libexec/lib/cli.js:66058:18)
+      at Request.self.callback (/usr/local/Cellar/yarn/1.15.2/libexec/lib/cli.js:129541:22)
+      at Request.emit (events.js:197:13)
+      at Request.<anonymous> (/usr/local/Cellar/yarn/1.15.2/libexec/lib/cli.js:130513:10)
+      at Request.emit (events.js:197:13)
+      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.15.2/libexec/lib/cli.js:130435:12)
+      at Object.onceWrapper (events.js:285:13)
+      at IncomingMessage.emit (events.js:202:15)
+      at endReadableNT (_stream_readable.js:1129:12)
+      at processTicksAndRejections (internal/process/next_tick.js:76:17)
+
+npm manifest: 
+  {
+    "name": "@content_line/js-utils",
+    "version": "0.0.18",
+    "description": "Content Line JS utils",
+    "publishConfig": {
+      "registry": "https://npm.contentline.ru"
+    },
+    "main": "dist/index.js",
+    "scripts": {
+      "build": "babel src --out-dir ./dist",
+      "prepublishOnly": "yarn build",
+      "format": "prettier --write"
+    },
+    "files": [
+      "dist"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "gitea@git.contentline.ru:CONTENT_LINE/cl-js-utils.git"
+    },
+    "keywords": [
+      "JS",
+      "utils"
+    ],
+    "author": "cudr",
+    "devDependencies": {
+      "@babel/cli": "^7.2.3",
+      "@babel/core": "^7.2.2",
+      "@babel/plugin-transform-runtime": "^7.3.4",
+      "@babel/preset-env": "^7.3.1",
+      "husky": "^1.3.1",
+      "lint-staged": "^8.1.0",
+      "prettier": "^1.16.1"
+    },
+    "dependencies": {
+      "query-string": "^6.3.0"
+    },
+    "husky": {
+      "hooks": {
+        "pre-commit": "lint-staged"
+      }
+    },
+    "lint-staged": {
+      "*.{js,json,babelrc}": [
+        "yarn run format",
+        "git add"
+      ]
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
