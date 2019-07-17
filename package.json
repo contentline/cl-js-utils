@@ -1,6 +1,6 @@
 {
   "name": "@content_line/js-utils",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "description": "Content Line JS utils",
   "publishConfig": {
     "registry": "https://npm.contentline.ru"
@@ -12,7 +12,7 @@
     "format": "prettier --write"
   },
   "files": [
-    "dist"
+    "lib"
   ],
   "repository": {
     "type": "git",
