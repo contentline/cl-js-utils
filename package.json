@@ -1,13 +1,13 @@
 {
   "name": "@content_line/js-utils",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "Content Line JS utils",
   "publishConfig": {
     "registry": "https://npm.contentline.ru"
   },
   "main": "dist/index.js",
   "scripts": {
-    "build": "babel src --out-dir ./dist",
+    "build": "babel src --out-dir ./lib",
     "prepublishOnly": "yarn build",
     "format": "prettier --write"
   },
