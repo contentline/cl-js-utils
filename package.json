@@ -7,8 +7,12 @@
   },
   "main": "dist/index.js",
   "scripts": {
-    "build": "babel src --out-dir ./lib",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "babel src --out-dir lib --extensions \".ts\" --source-maps inline",
     "prepublishOnly": "yarn build",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build": "npm run build:types && npm run build:js",
     "format": "prettier --write"
   },
   "files": [
@@ -19,18 +23,23 @@
     "url": "gitea@git.contentline.ru:CONTENT_LINE/cl-js-utils.git"
   },
   "keywords": [
-    "JS",
     "utils"
   ],
   "author": "cudr",
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.5.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.1",
     "@babel/plugin-transform-runtime": "^7.3.4",
     "@babel/preset-env": "^7.3.1",
+    "@babel/preset-typescript": "^7.3.3",
     "husky": "^1.3.1",
     "lint-staged": "^8.1.0",
-    "prettier": "^1.16.1"
+    "prettier": "^1.16.1",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.5.3"
   },
   "dependencies": {
     "query-string": "^6.3.0"
@@ -41,7 +50,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,json,babelrc}": [
+    "*.{js,ts,json,babelrc}": [
       "yarn run format",
       "git add"
     ]
