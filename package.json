@@ -1,6 +1,6 @@
 {
   "name": "@content_line/js-utils",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "description": "Content Line JS utils",
   "publishConfig": {
     "registry": "https://npm.contentline.ru"
@@ -8,7 +8,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build:types": "tsc --emitDeclarationOnly",
-    "build:js": "babel src --out-dir lib --extensions \".ts\" --source-maps inline",
+    "build:js": "babel src --out-dir lib --extensions \".ts,.js\" --source-maps inline",
     "prepublishOnly": "yarn build",
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
