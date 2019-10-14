@@ -1,9 +1,9 @@
 {
-  "name": "content_line_js-utils",
-  "version": "0.0.1",
+  "name": "@content_line/js-utils",
+  "version": "0.0.22",
   "description": "Content Line JS utils",
   "publishConfig": {
-    "registry": "https://registry.npmjs.com"
+    "registry": "https://npm.contentline.ru"
   },
   "main": "dist/index.js",
   "scripts": {
