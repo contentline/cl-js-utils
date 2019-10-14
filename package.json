@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Content Line JS utils",
   "publishConfig": {
-    "registry": "https://npm.contentline.ru"
+    "registry": "https://registry.npmjs.com"
   },
   "main": "dist/index.js",
   "scripts": {
