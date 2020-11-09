@@ -7,6 +7,8 @@ export interface uploadOpts {
   file: any;
   id?: string;
   progressHandle?: (e: ProgressEvent) => any;
+  width?: string;
+  height?: string;
 }
 
 export interface deleteOpts {

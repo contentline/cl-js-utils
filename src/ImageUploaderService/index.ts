@@ -17,13 +17,15 @@ class UploaderService {
 
   uploadImage = async (options: uploadOpts) => {
     try {
-      const { file, id, progressHandle } = options;
+      const { file, id, progressHandle, width, height } = options;
 
       const formData = new FormData();
 
       formData.append("image_file", file);
 
       if (id) formData.append("image_id", id);
+      if (width) formData.append("width", width);
+      if (height) formData.append("height", height);
       if (this.csrfToken)
         formData.append("csrfmiddlewaretoken", this.csrfToken);
 
